@@ -1,0 +1,379 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Core styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3a2f44, #1a2b50);
+    color: #ffffff;
+}
+
+header {
+    background: linear-gradient(to right, #595b5e, #59478a);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.product {
+    border-radius: 10px;
+    background: linear-gradient(to right, #a17bc5, #314d8a);
+    box-shadow: 0 4px 8px rgba(255, 232, 232, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: pulse 0.5s ease infinite;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 0.5s ease forwards;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product-content {
+    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.product h2 {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+    color: #f7fbff;
+    text-align: center;
+}
+
+.product p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Share button enhancements */
+
+/* Share button enhancements */
+
+.share-button {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s, border-width 0.3s, text-shadow 0.3s, font-size 0.3s, border-radius 0.3s, font-weight 0.3s, text-transform 0.3s;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.share-button:hover {
+    background: linear-gradient(to right, #ff6a00, #ff9100); /* Adjusted hover gradient colors */
+    transform: translateY(-2px) scale(1.05) rotate(-3deg);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #fff;
+    color: #fff;
+    border-width: 4px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.3em;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.share-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.share-button:hover::after {
+    opacity: 1;
+}
+
+
+
+.quantity {
+    margin-top: 20px;
+    text-align: center;
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.quantity label {
+    font-weight: bold;
+    margin-right: 5px;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.quantity input {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+.quantity input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+footer {
+    padding: 30px 0;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-link {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-link {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-link:first-child {
+    margin-left: 0;
+}
+
+.footer-link:last-child {
+    margin-right: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Visiting card styles */
+.visiting-card {
+    background: linear-gradient(135deg, #3d3e3f, #a9bdc2, #2f373d);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.visiting-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.visiting-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.visiting-card p:first-child {
+    margin-top: 0;
+}
+
+.visiting-card p:last-child {
+    margin-bottom: 0;
+}
+
+.visiting-card p.contact-info {
+    font-weight: bold;
+}
+
+.visiting-card p.contact-info span {
+    color: #007bff; /* Highlight contact information */
+}
+
+/* Visiting card shine animation */
+.shine {
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 300%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    animation: shineAnimation 8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    filter: blur(10px); /* Add blur effect to the shine */
+    opacity: 0.7; /* Adjust opacity for a more subtle effect */
+}
+
+@keyframes shineAnimation {
+    0% {
+        left: -200%;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: 200%;
+        transform: rotate(180deg);
+    }
+    100% {
+        left: 200%;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Animation keyframes */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); /* Adjusted scale for a subtle effect */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
