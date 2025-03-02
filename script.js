@@ -3,7 +3,7 @@ const products = [
     {
         name: "Product 1",
         image: "1.png",
-        description: "Description of Product 1."
+        description: "weigh 1.5gm - 2.5gm"
     },
     {
         name: "Product 2",
